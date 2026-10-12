@@ -1,0 +1,3 @@
+Catalog metadata and tools are authored as Apache-2.0 software. Model files are not
+included and remain subject to their source licenses. Pinned upstream links do not
+assert that native Python ONNX Runtime can execute the browser-targeted exports.

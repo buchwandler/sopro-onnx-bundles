@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "kind": "sopro-onnx-bundle-catalog",
+  "status": "bootstrap",
+  "bundles": {
+    "v2-turbo": {
+      "id": "v2-turbo",
+      "aliases": [
+        "turbo"
+      ],
+      "ref": "sopro:v2-turbo",
+      "model": "samuel-vitorino/sopro-v2-turbo-onnx",
+      "source_manifest": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/main/manifest.json",
+      "profiles": [
+        "wasm-uint8",
+        "webgpu-fp16"
+      ],
+      "languages": [
+        "en",
+        "pt",
+        "fr",
+        "de"
+      ],
+      "sample_rate": 24000,
+      "artifacts": [],
+      "note": "Bootstrap only: refresh while online for pinned URLs, hashes and sizes."
+    }
+  }
+}

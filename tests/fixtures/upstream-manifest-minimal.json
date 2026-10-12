@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "sampleRate": 24000,
+  "revision": "fixture-only",
+  "tokenizer": "tokenizer.json",
+  "steps": 2,
+  "profiles": {
+    "wasm-uint8": {
+      "provider": "wasm",
+      "dtype": "float32",
+      "graphs": {
+        "reference": {
+          "file": "reference.onnx",
+          "url": "../common/reference.onnx",
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "bytes": 50
+        }
+      },
+      "shards": {
+        "reference": {
+          "file": "weights-reference.bin",
+          "url": "../common/weights-reference.bin",
+          "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "bytes": 500
+        }
+      }
+    }
+  }
+}

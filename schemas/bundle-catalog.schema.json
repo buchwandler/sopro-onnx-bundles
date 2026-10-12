@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sopro ONNX bundle catalog",
+  "type": "object",
+  "required": [
+    "schema",
+    "kind",
+    "status",
+    "bundles"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "kind": {
+      "const": "sopro-onnx-bundle-catalog"
+    },
+    "status": {
+      "enum": [
+        "bootstrap",
+        "pinned"
+      ]
+    },
+    "bundles": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      }
+    }
+  }
+}

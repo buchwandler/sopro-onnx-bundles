@@ -1,0 +1,26 @@
+name: refresh-sopro-catalog
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 5 * * *'
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python tools/refresh_catalog.py
+      - run: python tools/verify_catalog.py catalog/bundles.json
+      - name: Open update pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'chore: refresh pinned Sopro ONNX catalog'
+          title: 'chore: refresh Sopro ONNX catalog'
+          branch: 'automation/refresh-sopro-catalog'
+          delete-branch: true
+          add-paths: |
+            catalog/bundles.json
+            catalog/source.json
