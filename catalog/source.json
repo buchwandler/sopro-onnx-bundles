@@ -1,7 +1,8 @@
 {
-  "schema": 1,
   "kind": "sopro-source",
-  "status": "bootstrap",
+  "manifest_revision": "7a645ef2aaecfea9",
   "repository": "samuel-vitorino/sopro-v2-turbo-onnx",
-  "resolved_revision": null
+  "resolved_revision": "9fe97bddf52ed785af3634db86a032bb7e07bf18",
+  "schema": 1,
+  "status": "pinned"
 }

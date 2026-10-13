@@ -1,29 +1,507 @@
 {
-  "schema": 1,
-  "kind": "sopro-onnx-bundle-catalog",
-  "status": "bootstrap",
   "bundles": {
     "v2-turbo": {
-      "id": "v2-turbo",
       "aliases": [
         "turbo"
       ],
-      "ref": "sopro:v2-turbo",
-      "model": "samuel-vitorino/sopro-v2-turbo-onnx",
-      "source_manifest": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/main/manifest.json",
-      "profiles": [
-        "wasm-uint8",
-        "webgpu-fp16"
+      "artifacts": [
+        {
+          "bytes": null,
+          "component": null,
+          "filename": "manifest.json",
+          "path": "manifest.json",
+          "profile": null,
+          "role": "manifest",
+          "sha256": null,
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/manifest.json?download=true"
+        },
+        {
+          "bytes": null,
+          "component": null,
+          "filename": "tokenizer.json",
+          "path": "tokenizer.json",
+          "profile": null,
+          "role": "tokenizer",
+          "sha256": null,
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/tokenizer.json?download=true"
+        },
+        {
+          "bytes": 22045,
+          "component": "acoustic_condition",
+          "dtype": "float32",
+          "filename": "acoustic_condition.onnx",
+          "path": "wasm-uint8/acoustic_condition.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "51c6da2a7b3813b7d0d64aef1ef9cc28cdb41064ed5044877f54d4fcb8b6eede",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/acoustic_condition.onnx?download=true"
+        },
+        {
+          "bytes": 718899,
+          "component": "acoustic_offline_2",
+          "dtype": "float32",
+          "filename": "acoustic_offline_2.onnx",
+          "path": "wasm-uint8/acoustic_offline_2.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "93efe76b3ec7619071b8cee242fa77d81db91896317f2603af4cdeb0ce745764",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/acoustic_offline_2.onnx?download=true"
+        },
+        {
+          "bytes": 405567,
+          "component": "acoustic_stream_ode_2_0",
+          "dtype": "float32",
+          "filename": "acoustic_stream_ode_2_0.onnx",
+          "path": "wasm-uint8/acoustic_stream_ode_2_0.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "6b02355fed180c90ef4dccbcd4fcbd072015788cef532773cf32d020134b7750",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/acoustic_stream_ode_2_0.onnx?download=true"
+        },
+        {
+          "bytes": 405567,
+          "component": "acoustic_stream_ode_2_1",
+          "dtype": "float32",
+          "filename": "acoustic_stream_ode_2_1.onnx",
+          "path": "wasm-uint8/acoustic_stream_ode_2_1.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "5a82910659a3f87502eb844383202c6cd4c020d6a7b4fc6af97dbc51edc36b0c",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/acoustic_stream_ode_2_1.onnx?download=true"
+        },
+        {
+          "bytes": 742984,
+          "component": "acoustic_stream_prefill_2",
+          "dtype": "float32",
+          "filename": "acoustic_stream_prefill_2.onnx",
+          "path": "wasm-uint8/acoustic_stream_prefill_2.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "10afcbb60216c40fe4b53930fa9bed454be31acd41ea5783a73f696b0f3e0ae1",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/acoustic_stream_prefill_2.onnx?download=true"
+        },
+        {
+          "bytes": 423585,
+          "component": "acoustic_stream_prefill_ode_2_0",
+          "dtype": "float32",
+          "filename": "acoustic_stream_prefill_ode_2_0.onnx",
+          "path": "wasm-uint8/acoustic_stream_prefill_ode_2_0.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "791620c1be5bca85a044ea21f28da8959eec890ae480a8f71ab93e9fb36a00da",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/acoustic_stream_prefill_ode_2_0.onnx?download=true"
+        },
+        {
+          "bytes": 423585,
+          "component": "acoustic_stream_prefill_ode_2_1",
+          "dtype": "float32",
+          "filename": "acoustic_stream_prefill_ode_2_1.onnx",
+          "path": "wasm-uint8/acoustic_stream_prefill_ode_2_1.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "7ad1e334f67e7886ec3cf01a0bd45a516a9bb00e70e38161991c3c48b27e7b85",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/acoustic_stream_prefill_ode_2_1.onnx?download=true"
+        },
+        {
+          "bytes": 734062,
+          "component": "acoustic_stream_step_2",
+          "dtype": "float32",
+          "filename": "acoustic_stream_step_2.onnx",
+          "path": "wasm-uint8/acoustic_stream_step_2.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "475ac302c05914779cced160251d3bea2748a1ba2bd068375edecc3966d9c899",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/acoustic_stream_step_2.onnx?download=true"
+        },
+        {
+          "bytes": 318971,
+          "component": "reference",
+          "dtype": "float32",
+          "filename": "reference.onnx",
+          "path": "common/reference.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "fb6f3def33e918a590d0a2d66697a5c8178cb5b252eb013f122a696959a2a0b3",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/common/reference.onnx?download=true"
+        },
+        {
+          "bytes": 444545,
+          "component": "semantic_core",
+          "dtype": "float32",
+          "filename": "semantic_core.onnx",
+          "path": "common/semantic_core.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "352443a2217f730fc08bad3e29c0d6683dcedde568dfe0f8fa58a8b46ef15fd1",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/common/semantic_core.onnx?download=true"
+        },
+        {
+          "bytes": 30037,
+          "component": "semantic_prefix",
+          "dtype": "float32",
+          "filename": "semantic_prefix.onnx",
+          "path": "common/semantic_prefix.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "2f0feabb47c3af038c1ed0127d907be674996e64c7a159265ffe181823f009dd",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/common/semantic_prefix.onnx?download=true"
+        },
+        {
+          "bytes": 281252,
+          "component": "vocoder",
+          "dtype": "float32",
+          "filename": "vocoder.onnx",
+          "path": "wasm-uint8/vocoder.onnx",
+          "profile": "wasm-uint8",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "dfa4793d1f8a00b2950df821c25813860826b1bcfb6f49fdb1b6c28c5627a1be",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/vocoder.onnx?download=true"
+        },
+        {
+          "bytes": 103205888,
+          "component": "acoustic",
+          "dtype": null,
+          "filename": "weights-acoustic.bin",
+          "path": "wasm-uint8/weights-acoustic.bin",
+          "profile": "wasm-uint8",
+          "provider": null,
+          "role": "shard",
+          "sha256": "66a12561ea7d3a451d4e70be4713cbc03787566804bb137c6f07ccb22c1aceb0",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/weights-acoustic.bin?download=true"
+        },
+        {
+          "bytes": 25414400,
+          "component": "condition",
+          "dtype": null,
+          "filename": "weights-condition.bin",
+          "path": "wasm-uint8/weights-condition.bin",
+          "profile": "wasm-uint8",
+          "provider": null,
+          "role": "shard",
+          "sha256": "a4fb7fdc67246d7638d84c72b5b5d4888cc4bbda43944f2405d50fe9c806c359",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/weights-condition.bin?download=true"
+        },
+        {
+          "bytes": 94666752,
+          "component": "reference",
+          "dtype": null,
+          "filename": "weights-reference.bin",
+          "path": "common/weights-reference.bin",
+          "profile": "wasm-uint8",
+          "provider": null,
+          "role": "shard",
+          "sha256": "5ae19423d496681eed622c9ae372cdf60df9a5be106964c1f483eecd6cbe3ca1",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/common/weights-reference.bin?download=true"
+        },
+        {
+          "bytes": 96626752,
+          "component": "semantic",
+          "dtype": null,
+          "filename": "weights-semantic.bin",
+          "path": "common/weights-semantic.bin",
+          "profile": "wasm-uint8",
+          "provider": null,
+          "role": "shard",
+          "sha256": "91308fb72a6cc5a452f47e6cb5f3156970e39ef8a54690bbf98e116f11c1c75d",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/common/weights-semantic.bin?download=true"
+        },
+        {
+          "bytes": 13723840,
+          "component": "vocoder",
+          "dtype": null,
+          "filename": "weights-vocoder.bin",
+          "path": "wasm-uint8/weights-vocoder.bin",
+          "profile": "wasm-uint8",
+          "provider": null,
+          "role": "shard",
+          "sha256": "9d8dea8079be0ef36e5a33de233a9144d060afab4a959b73fdfaee166a5fb235",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/wasm-uint8/weights-vocoder.bin?download=true"
+        },
+        {
+          "bytes": 13786,
+          "component": "acoustic_condition",
+          "dtype": "float16",
+          "filename": "acoustic_condition.onnx",
+          "path": "webgpu-fp16/acoustic_condition.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "webgpu",
+          "role": "graph",
+          "sha256": "bc5ee7c8b2a12ef321b855a79a41391d22649292cf480cbc2b99d660faac7fec",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/acoustic_condition.onnx?download=true"
+        },
+        {
+          "bytes": 547230,
+          "component": "acoustic_offline_2",
+          "dtype": "float16",
+          "filename": "acoustic_offline_2.onnx",
+          "path": "webgpu-fp16/acoustic_offline_2.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "webgpu",
+          "role": "graph",
+          "sha256": "13fe8b6ec28c7e42bb5fc98d3ea004ca7fbc857bd0ba71ef82da35975508c11d",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/acoustic_offline_2.onnx?download=true"
+        },
+        {
+          "bytes": 286492,
+          "component": "acoustic_stream_ode_2_0",
+          "dtype": "float16",
+          "filename": "acoustic_stream_ode_2_0.onnx",
+          "path": "webgpu-fp16/acoustic_stream_ode_2_0.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "webgpu",
+          "role": "graph",
+          "sha256": "8dca1aef6518f97be60553aea5c91c5360c3ca69e4b358096f4a5a1c072dc432",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/acoustic_stream_ode_2_0.onnx?download=true"
+        },
+        {
+          "bytes": 286492,
+          "component": "acoustic_stream_ode_2_1",
+          "dtype": "float16",
+          "filename": "acoustic_stream_ode_2_1.onnx",
+          "path": "webgpu-fp16/acoustic_stream_ode_2_1.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "webgpu",
+          "role": "graph",
+          "sha256": "6927034c9d5e9efb58f8e23dcf64116210ffd8985001146f82636882b8a5459f",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/acoustic_stream_ode_2_1.onnx?download=true"
+        },
+        {
+          "bytes": 571315,
+          "component": "acoustic_stream_prefill_2",
+          "dtype": "float16",
+          "filename": "acoustic_stream_prefill_2.onnx",
+          "path": "webgpu-fp16/acoustic_stream_prefill_2.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "webgpu",
+          "role": "graph",
+          "sha256": "34c40d18fe27208fd4e4dea85fb0718e71e225c28bfe39cc4ea0bfdec11525c7",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/acoustic_stream_prefill_2.onnx?download=true"
+        },
+        {
+          "bytes": 304140,
+          "component": "acoustic_stream_prefill_ode_2_0",
+          "dtype": "float16",
+          "filename": "acoustic_stream_prefill_ode_2_0.onnx",
+          "path": "webgpu-fp16/acoustic_stream_prefill_ode_2_0.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "webgpu",
+          "role": "graph",
+          "sha256": "c145758f50886e38451dee3b170ce352e6df6c61110fec902e0962231970e213",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/acoustic_stream_prefill_ode_2_0.onnx?download=true"
+        },
+        {
+          "bytes": 304140,
+          "component": "acoustic_stream_prefill_ode_2_1",
+          "dtype": "float16",
+          "filename": "acoustic_stream_prefill_ode_2_1.onnx",
+          "path": "webgpu-fp16/acoustic_stream_prefill_ode_2_1.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "webgpu",
+          "role": "graph",
+          "sha256": "8007e6e1dadc4a46fbf54d02b332f541a392b7b396c2b3e98d7dae633f594eb7",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/acoustic_stream_prefill_ode_2_1.onnx?download=true"
+        },
+        {
+          "bytes": 563655,
+          "component": "acoustic_stream_step_2",
+          "dtype": "float16",
+          "filename": "acoustic_stream_step_2.onnx",
+          "path": "webgpu-fp16/acoustic_stream_step_2.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "webgpu",
+          "role": "graph",
+          "sha256": "de6ee126e5dad03ed92f87ecc917a84a0bfffdbd6572c9f0b4c92b8764f5deda",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/acoustic_stream_step_2.onnx?download=true"
+        },
+        {
+          "bytes": 318971,
+          "component": "reference",
+          "dtype": "float32",
+          "filename": "reference.onnx",
+          "path": "common/reference.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "fb6f3def33e918a590d0a2d66697a5c8178cb5b252eb013f122a696959a2a0b3",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/common/reference.onnx?download=true"
+        },
+        {
+          "bytes": 444545,
+          "component": "semantic_core",
+          "dtype": "float32",
+          "filename": "semantic_core.onnx",
+          "path": "common/semantic_core.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "352443a2217f730fc08bad3e29c0d6683dcedde568dfe0f8fa58a8b46ef15fd1",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/common/semantic_core.onnx?download=true"
+        },
+        {
+          "bytes": 30037,
+          "component": "semantic_prefix",
+          "dtype": "float32",
+          "filename": "semantic_prefix.onnx",
+          "path": "common/semantic_prefix.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "wasm",
+          "role": "graph",
+          "sha256": "2f0feabb47c3af038c1ed0127d907be674996e64c7a159265ffe181823f009dd",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/common/semantic_prefix.onnx?download=true"
+        },
+        {
+          "bytes": 161836,
+          "component": "vocoder",
+          "dtype": "float32",
+          "filename": "vocoder.onnx",
+          "path": "webgpu-fp16/vocoder.onnx",
+          "profile": "webgpu-fp16",
+          "provider": "webgpu",
+          "role": "graph",
+          "sha256": "450986058931d9f9ec5fb0a2fa267046c0a875894655bb85dea786ee917faab0",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/vocoder.onnx?download=true"
+        },
+        {
+          "bytes": 63275008,
+          "component": "acoustic",
+          "dtype": null,
+          "filename": "weights-acoustic.bin",
+          "path": "webgpu-fp16/weights-acoustic.bin",
+          "profile": "webgpu-fp16",
+          "provider": null,
+          "role": "shard",
+          "sha256": "a53dbabb7fc2fa1a44459255d04a059baf3d0c2d99cba436d7749ac03d29f4c0",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/weights-acoustic.bin?download=true"
+        },
+        {
+          "bytes": 50790400,
+          "component": "condition",
+          "dtype": null,
+          "filename": "weights-condition.bin",
+          "path": "webgpu-fp16/weights-condition.bin",
+          "profile": "webgpu-fp16",
+          "provider": null,
+          "role": "shard",
+          "sha256": "1446b435dcf838588eb90b3149db48e2b95a0a4e5a92bb9137634beb4fe826a2",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/weights-condition.bin?download=true"
+        },
+        {
+          "bytes": 94666752,
+          "component": "reference",
+          "dtype": null,
+          "filename": "weights-reference.bin",
+          "path": "common/weights-reference.bin",
+          "profile": "webgpu-fp16",
+          "provider": null,
+          "role": "shard",
+          "sha256": "5ae19423d496681eed622c9ae372cdf60df9a5be106964c1f483eecd6cbe3ca1",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/common/weights-reference.bin?download=true"
+        },
+        {
+          "bytes": 96626752,
+          "component": "semantic",
+          "dtype": null,
+          "filename": "weights-semantic.bin",
+          "path": "common/weights-semantic.bin",
+          "profile": "webgpu-fp16",
+          "provider": null,
+          "role": "shard",
+          "sha256": "91308fb72a6cc5a452f47e6cb5f3156970e39ef8a54690bbf98e116f11c1c75d",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/common/weights-semantic.bin?download=true"
+        },
+        {
+          "bytes": 54126656,
+          "component": "vocoder",
+          "dtype": null,
+          "filename": "weights-vocoder.bin",
+          "path": "webgpu-fp16/weights-vocoder.bin",
+          "profile": "webgpu-fp16",
+          "provider": null,
+          "role": "shard",
+          "sha256": "45d7da8d75b1da91e557f4d6b1ba44e19068dd72d38ea0eca3e51f3e5d792d5b",
+          "url": "https://huggingface.co/samuel-vitorino/sopro-v2-turbo-onnx/resolve/9fe97bddf52ed785af3634db86a032bb7e07bf18/webgpu-fp16/weights-vocoder.bin?download=true"
+        }
       ],
+      "id": "v2-turbo",
       "languages": [
         "en",
         "pt",
         "fr",
         "de"
       ],
+      "model": "samuel-vitorino/sopro-v2-turbo-onnx",
+      "profiles": {
+        "wasm-uint8": {
+          "dtype": "float32",
+          "graphs": {
+            "acoustic_condition": "wasm-uint8/acoustic_condition.onnx",
+            "acoustic_offline_2": "wasm-uint8/acoustic_offline_2.onnx",
+            "acoustic_stream_ode_2_0": "wasm-uint8/acoustic_stream_ode_2_0.onnx",
+            "acoustic_stream_ode_2_1": "wasm-uint8/acoustic_stream_ode_2_1.onnx",
+            "acoustic_stream_prefill_2": "wasm-uint8/acoustic_stream_prefill_2.onnx",
+            "acoustic_stream_prefill_ode_2_0": "wasm-uint8/acoustic_stream_prefill_ode_2_0.onnx",
+            "acoustic_stream_prefill_ode_2_1": "wasm-uint8/acoustic_stream_prefill_ode_2_1.onnx",
+            "acoustic_stream_step_2": "wasm-uint8/acoustic_stream_step_2.onnx",
+            "reference": "common/reference.onnx",
+            "semantic_core": "common/semantic_core.onnx",
+            "semantic_prefix": "common/semantic_prefix.onnx",
+            "vocoder": "wasm-uint8/vocoder.onnx"
+          },
+          "provider": "wasm",
+          "shards": {
+            "acoustic": "wasm-uint8/weights-acoustic.bin",
+            "condition": "wasm-uint8/weights-condition.bin",
+            "reference": "common/weights-reference.bin",
+            "semantic": "common/weights-semantic.bin",
+            "vocoder": "wasm-uint8/weights-vocoder.bin"
+          }
+        },
+        "webgpu-fp16": {
+          "dtype": "float16",
+          "graphs": {
+            "acoustic_condition": "webgpu-fp16/acoustic_condition.onnx",
+            "acoustic_offline_2": "webgpu-fp16/acoustic_offline_2.onnx",
+            "acoustic_stream_ode_2_0": "webgpu-fp16/acoustic_stream_ode_2_0.onnx",
+            "acoustic_stream_ode_2_1": "webgpu-fp16/acoustic_stream_ode_2_1.onnx",
+            "acoustic_stream_prefill_2": "webgpu-fp16/acoustic_stream_prefill_2.onnx",
+            "acoustic_stream_prefill_ode_2_0": "webgpu-fp16/acoustic_stream_prefill_ode_2_0.onnx",
+            "acoustic_stream_prefill_ode_2_1": "webgpu-fp16/acoustic_stream_prefill_ode_2_1.onnx",
+            "acoustic_stream_step_2": "webgpu-fp16/acoustic_stream_step_2.onnx",
+            "reference": "common/reference.onnx",
+            "semantic_core": "common/semantic_core.onnx",
+            "semantic_prefix": "common/semantic_prefix.onnx",
+            "vocoder": "webgpu-fp16/vocoder.onnx"
+          },
+          "provider": "webgpu",
+          "shards": {
+            "acoustic": "webgpu-fp16/weights-acoustic.bin",
+            "condition": "webgpu-fp16/weights-condition.bin",
+            "reference": "common/weights-reference.bin",
+            "semantic": "common/weights-semantic.bin",
+            "vocoder": "webgpu-fp16/weights-vocoder.bin"
+          }
+        }
+      },
+      "ref": "sopro:v2-turbo",
+      "revision": "7a645ef2aaecfea9",
       "sample_rate": 24000,
-      "artifacts": [],
-      "note": "Bootstrap only: refresh while online for pinned URLs, hashes and sizes."
+      "source_commit": "9fe97bddf52ed785af3634db86a032bb7e07bf18",
+      "steps": 2
     }
-  }
+  },
+  "kind": "sopro-onnx-bundle-catalog",
+  "schema": 1,
+  "status": "pinned"
 }
