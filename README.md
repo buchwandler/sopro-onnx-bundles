@@ -12,14 +12,11 @@ python tools/verify_catalog.py catalog/bundles.json
 
 The builder fetches upstream `manifest.json` at a **resolved 40-character HF commit**,
 normalizes file URLs and includes exported graph/shard SHA256 + byte sizes. All generated
-file URLs pin that exact commit. The bootstrap `catalog/bundles.json` supplied here is
-**metadata-only** and is marked `status: bootstrap`; it is not a verified install catalog.
-Run refresh while online before installing artifacts. The verification command intentionally
-rejects bootstrap catalogs unless `--allow-bootstrap` is set.
+file URLs pin that exact commit. The checked-in `catalog/bundles.json` is pinned to a resolved upstream revision. Normal verification rejects bootstrap catalogs; reserve `--allow-bootstrap` for explicitly named development fixtures only.
 
-Profiles are original upstream IDs: `wasm-uint8` and `webgpu-fp16`. Native ONNX Runtime
-compatibility is **not** assumed; follow the provider specified by each graph.
+The pinned upstream manifest currently lists two published export profiles: `wasm-uint8` (portable/quantized, `wasm` provider) and `webgpu-fp16` (float16, `webgpu` provider). These are source-published export tiers, not evidence of native inference or parity. SoproSynth's Python runtime currently accepts only `wasm-uint8` on CPU; consumers must use the provider declared by each profile.
 
+There is no `cpu-fp32` profile or artifact in this catalog. Do not invent or advertise that tier until upstream supplies pinned FP32 graph/shard exports and direct FP32 oracle comparisons are available. Native-versus-ONNX perceptual evaluation also remains blocked on a licensed listening corpus.
 The catalog has one model identity: `sopro:v2-turbo`. Do not create language-specific
 bundles for the same multilingual weights.
 

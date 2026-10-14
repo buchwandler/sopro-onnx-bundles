@@ -17,11 +17,31 @@ def fixture():
                 'shards':{'reference':{'file':'weights-reference.bin','url':'../common/weights-reference.bin', 'sha256':HASH,'bytes':500}}
             }}}
 
+def test_bootstrap_is_rejected_by_default():
+    with pytest.raises(ValueError, match='bootstrap'):
+        verify({'schema': 1, 'kind': 'sopro-onnx-bundle-catalog', 'status': 'bootstrap'})
+
+
 def test_build_verify():
     cat=from_manifest(fixture(),REV)
     verify(cat)
     assert len(cat['bundles']['v2-turbo']['artifacts'])==4
     assert cat['bundles']['v2-turbo']['profiles']['wasm-uint8']['graphs']['reference']=='common/reference.onnx'
+    assert set(cat['bundles']['v2-turbo']['profiles']) == {'wasm-uint8'}
+    assert 'cpu-fp32' not in cat['bundles']['v2-turbo']['profiles']
+
+
+def test_pinned_catalog_lists_only_known_published_profiles():
+    path = Path(__file__).resolve().parents[1] / 'catalog' / 'bundles.json'
+    catalog = json.loads(path.read_text(encoding='utf-8'))
+    verify(catalog)
+    bundle = catalog['bundles']['v2-turbo']
+    assert set(bundle['profiles']) == {'wasm-uint8', 'webgpu-fp16'}
+    assert bundle['profiles']['wasm-uint8']['provider'] == 'wasm'
+    assert bundle['profiles']['webgpu-fp16']['provider'] == 'webgpu'
+    assert 'cpu-fp32' not in bundle['profiles']
+    assert not any(item.get('profile') == 'cpu-fp32' for item in bundle['artifacts'])
+
 
 def test_rejects_unpinned():
     cat=from_manifest(fixture(),REV)
